@@ -16,7 +16,7 @@ edges:
   vector:
     description: 'The first vector to add'
     direction: input
-    type: vec3i or vec3f
+    type: vec3i or vec3f or proxy
   x:
     description: 'The second value to add'
     direction: output

@@ -15,4 +15,4 @@ edges:
     type: proxy
 
 source: |
-  ${OUTPUT.proxied = proxy}
+  #Overriden by source override to emplace the proxies location dynamically

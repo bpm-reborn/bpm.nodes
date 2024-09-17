@@ -12,11 +12,11 @@ edges:
   vector_a:
     description: 'The first vector to add'
     direction: input
-    type: vec3i or vec3f
+    type: vec3i or vec3f or proxy
   vector_b:
     description: 'The second value to add'
     direction: input
-    type: vec3i or vec3f
+    type: vec3i or vec3f or proxy
   result:
     description: 'The result of the addition'
     direction: output

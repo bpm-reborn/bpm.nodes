@@ -17,7 +17,7 @@ edges:
   location:
     description: 'The location to spawn the particle'
     direction: input
-    type: vec3f or vec3i
+    type: vec3f or vec3i or proxy
   type:
     description: 'The type of particle to spawn'
     direction: input
