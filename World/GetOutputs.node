@@ -1,0 +1,19 @@
+description: "Gets the output item handlers for this workspace"
+group: Network
+name: Get Outputs
+extends: Base/Node
+
+theme:
+  color: '#3af721'
+  height: 40
+  width: 120
+  icon: 0xf07c
+
+edges:
+  inputs:
+    description: 'The combined input item handler'
+    direction: output
+    type: itemhandler
+source: |
+  local inputs = Network:getOutputs(_Uid)
+  ${OUTPUT.inputs = inputs}

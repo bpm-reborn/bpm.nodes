@@ -1,0 +1,33 @@
+# Notification.node
+description: "Shows an info notification message."
+group: Notify
+name: Info
+extends: Base/Node
+
+theme:
+  color: '#22D8C9'
+  height: 60
+  width: 100
+  icon: 0xf27a
+
+edges:
+  exec_in:
+    description: 'The input execution flow'
+    direction: input
+    type: exec
+  message:
+    description: 'The message to print.'
+    direction: input
+    type: string
+  exec_out:
+    description: 'The output execution flow'
+    direction: output
+    type: exec
+
+source: |
+  
+  local length = string.len(message)
+  local time = length * 0.5
+  Notify:message(message, time, "#22D8C9F5", "Info", "INFO")
+  ${EXEC.exec_out}
+  

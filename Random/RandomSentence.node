@@ -1,0 +1,18 @@
+description: "Generates a random sentence."
+group: Random
+name: RNG Sentence
+extends: Base/Node
+
+theme:
+  color: '#213752'
+  width: 120
+  height: 40
+  icon: 0xe55f
+edges:
+  result:
+    description: 'The generated random word'
+    direction: output
+    type: string
+source: |
+  ${OUTPUT.result = java.import('bpm.common.utils.Random'):randomSentence()}
+  

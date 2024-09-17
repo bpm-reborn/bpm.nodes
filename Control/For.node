@@ -1,0 +1,57 @@
+# Loop.node
+description: "A for loop that executes a body of code while a condition is true"
+group: Control
+name: For
+extends: Base/Node
+
+theme:
+  color: '#f4d93d'
+  height: 80
+  width: 140
+  icon: 0x21bb
+
+edges:
+
+  initial:
+    description: 'The starting value of the iteration'
+    direction: input
+    type: number
+    value:
+      type: int
+      default: 1
+  target:
+    description: 'The ending value of the iteration'
+    direction: input
+    type: number
+    value:
+      type: int
+      default: 1
+  increment:
+    description: 'The step'
+    direction: input
+    type: number
+    value:
+      type: int
+      default: 1
+  iterator:
+    description: 'The iterated index'
+    direction: output
+    type: number
+  exec_in:
+    description: 'The input execution flow'
+    direction: input
+    type: exec
+  exec_out:
+    description: 'The output execution flow after the loop ends'
+    direction: output
+    type: exec
+  passed:
+    description: 'The output execution flow if the loop ends'
+    direction: output
+    type: exec
+source: |
+  for i = initial, target, increment do
+      ${OUTPUT.iterator = i}
+      ${EXEC.exec_out}
+  end
+  ${EXEC.passed}

@@ -1,0 +1,47 @@
+# OnRun.node
+description: "Calls the output execution flow if the location has redstone power."
+group: Events
+name: Redstone
+extends: Base/Node
+theme:
+  color: '#b3281e'
+  width: 120
+  height: 40
+  icon: 0xf6ff
+edges:
+  pos:
+    description: 'The location to check for redstone power.'
+    direction: input
+    type: vec3i
+  on:
+    description: 'Called once when the location has redstone power.'
+    direction: output
+    type: exec
+  off:
+    description: 'Called once when the location has no redstone power.'
+    direction: output
+    type: exec
+  level:
+    description: 'The redstone power level at the location.'
+    direction: output
+    type: number
+  exec_out:
+    description: 'The output execution flow'
+    direction: output
+    type: exec
+source: |
+  local power = World:signalAt(pos.x, pos.y, pos.z)
+  if variables["power"] == nil then
+      variables["power"] = 0
+      return
+  end
+  if power ~= variables["power"] then
+      variables["power"] = power
+      if power > 0 then
+          ${EXEC.on}
+      else 
+          ${EXEC.off}
+      end
+  end
+  ${OUTPUT.level = power}
+  ${EXEC.exec_out}
