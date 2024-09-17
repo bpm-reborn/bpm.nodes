@@ -9,7 +9,7 @@ theme:
   height: 60
   width: 120
   icon: 0xf0e8
-
+  
 edges:
   condition:
     description: 'The condition to check'

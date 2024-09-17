@@ -16,4 +16,4 @@ edges:
     type: proxy
 
 source: |
-  ${OUTPUT.proxied} = variables[name]
+  #To be dynamically generated and replaced with the block pos
