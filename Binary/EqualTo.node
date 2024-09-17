@@ -14,4 +14,4 @@ edges:
     type: boolean
 
 source: |
-  ${OUTPUT.is_equal = value_a == value_b}
+  ${OUTPUT.is_equal = a == b}

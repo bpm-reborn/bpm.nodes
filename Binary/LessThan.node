@@ -1,28 +1,19 @@
-# LessThan.node
-description: "Compares if the first value is less than the second"
-group: Logic
+description: "Checks if the second value is less than e"
+group: Binary
 name: Less Than
-extends: Base/Node
-
-theme:
-  color: '#6b4c9a'
-  width: 140
-  height: 60
-  icon: 0x003e
+extends: Binary/Binary
 
 edges:
-  ValueA:
+  a:
     description: 'The first value to compare'
-    direction: input
     type: number
-  ValueB:
+  b:
     description: 'The second value to compare'
-    direction: input
     type: number
-  Result:
-    description: 'The result of the comparison'
+  is_less:
+    description: 'True if the first value is less than'
     direction: output
     type: boolean
 
 source: |
-  return ValueA < ValueB
+  ${OUTPUT.is_less = a < b}

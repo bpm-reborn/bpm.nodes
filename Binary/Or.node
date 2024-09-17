@@ -1,0 +1,17 @@
+description: "True if either values are true"
+group: Binary
+name: Or
+extends: Binary/Binary
+
+edges:
+  a:
+    type: boolean
+  b:
+    type: boolean
+  either_are_true:
+    description: 'True if either values are true'
+    direction: output
+    type: boolean
+
+source: |
+  ${OUTPUT.either_are_true = a or b}

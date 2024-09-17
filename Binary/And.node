@@ -1,37 +1,17 @@
-# ASnd.node
-description: "A for loop that executes a body of code while a condition is true"
-group: Control
+description: "True if both values are true"
+group: Binary
 name: And
-extends: Base/Node
-
-theme:
-  color: '#ac3e3d'
-  height: 80
-  width: 100
-  icon: 0x21bb
+extends: Binary/Binary
 
 edges:
-  exec_in:
-    description: 'The input execution flow'
-    direction: input
-    type: exec
-  
-  condition:
-    description: 'The condition to check before each iteration'
-    direction: input
+  a:
     type: boolean
-  body:
-    description: 'The body of the loop to execute'
+  b:
+    type: boolean
+  both_are_true:
+    description: 'True if both values are true'
     direction: output
-    type: exec
-  exec_out:
-    description: 'The output execution flow after the loop ends'
-    direction: output
-    type: exec
+    type: boolean
 
 source: |
-  local cond = ${LAMBDA.condition}
-  while cond() do
-    ${EXEC.body}
-  end
-  ${EXEC.exec_out}
+  ${OUTPUT.both_are_true = a and b}
