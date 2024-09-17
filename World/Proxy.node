@@ -8,16 +8,11 @@ theme:
   height: 40
   width: 120
   icon: 0xf557
-
 edges:
-  proxy: 
-    description: 'The variable to be proxied.'
-    direction: input
-    type: proxy
   proxied:
     description: 'The retrieved value of the variable.'
     direction: output
     type: proxy
 
 source: |
-  #To be dynamically generated and replaced with the block pos
+  ${OUTPUT.proxied = proxy}
