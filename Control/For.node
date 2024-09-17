@@ -1,17 +1,9 @@
-# Loop.node
-description: "A for loop that executes a body of code while a condition is true"
+description: "Does the execution flow for the given range"
 group: Control
 name: For
-extends: Base/Node
-
-theme:
-  color: '#f4d93d'
-  height: 80
-  width: 140
-  icon: 0x21bb
+extends: Control/Control
 
 edges:
-
   initial:
     description: 'The starting value of the iteration'
     direction: input
@@ -37,21 +29,13 @@ edges:
     description: 'The iterated index'
     direction: output
     type: number
-  exec_in:
-    description: 'The input execution flow'
-    direction: input
-    type: exec
-  exec_out:
-    description: 'The output execution flow after the loop ends'
-    direction: output
-    type: exec
-  passed:
+  on_for:
     description: 'The output execution flow if the loop ends'
     direction: output
     type: exec
 source: |
   for i = initial, target, increment do
       ${OUTPUT.iterator = i}
-      ${EXEC.exec_out}
+      ${EXEC.on_for}
   end
-  ${EXEC.passed}
+  ${EXEC.exec_out}

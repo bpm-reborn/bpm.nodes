@@ -1,0 +1,18 @@
+description: "A binary node that performs some action upon two values"
+group: Binary
+name: Binary
+theme:
+  color: '#ac3e3d'
+  height: 80
+  width: 100
+  icon: 0x21bb
+
+edges:
+  a:
+    description: 'The first first value'
+    direction: input
+    # type: To be implemented by implementing node
+  b:
+    description: 'The second value'
+    direction: input
+    # type: To be implemented by implementing node

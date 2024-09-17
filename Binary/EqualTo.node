@@ -1,0 +1,17 @@
+description: "Compares if two values are equal"
+group: Binary
+name: Equal to
+extends: Binary/Binary
+
+edges:
+  a:
+    type: any
+  b:
+    type: any
+  is_equal:
+    description: 'True if the two values are equal'
+    direction: output
+    type: boolean
+
+source: |
+  ${OUTPUT.is_equal = value_a == value_b}

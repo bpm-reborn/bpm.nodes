@@ -1,0 +1,30 @@
+description: "Does the execution flow for each element in the list"
+group: Control
+name: Each
+extends: Control/Control
+
+edges:
+  list:
+    description: 'The list to iterate over'
+    direction: input
+    type: list
+  on_each:
+    description: 'Called after the loop ends'
+    direction: output
+    type: exec
+  index:
+    description: 'The current index in the list'
+    direction: output
+    type: number
+  element:
+    description: 'The current element in the list'
+    direction: output
+    type: any
+source: |
+  for i, value in ipairs(list) do
+      ${OUTPUT.element = value}
+      ${OUTPUT.index = i}
+      ${EXEC.on_each}    
+  end
+  ${EXEC.exec_out}
+  

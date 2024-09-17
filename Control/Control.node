@@ -1,0 +1,19 @@
+description: "Does the exec_out for each element in the list"
+group: Control
+name: Control
+
+theme:
+  color: '#eb3e31'
+  height: 80
+  width: 140
+  icon: 0x21bb
+
+edges:
+  exec_in:
+    description: 'Begin the control flow'
+    direction: input
+    type: exec
+  exec_out:
+    description: 'Called after the loop ends'
+    direction: output
+    type: exec
