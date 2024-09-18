@@ -21,6 +21,7 @@ edges:
 source: |
   local inventory = World:getItemHandler(_Uid, proxy.x, proxy.y, proxy.z)
   if(inventory == nil) then
+    Notify:error("No inventory found at " .. proxy.x .. ", " .. proxy.y .. ", " .. proxy.z, 10, '#ff0000')
     ${OUTPUT.items = nil}
   end
   ${OUTPUT.items = inventory:getItems()}
