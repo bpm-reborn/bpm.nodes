@@ -6,7 +6,7 @@ theme:
   color: '#eb3e31'
   height: 80
   width: 140
-  icon: 0x21bb
+  icon: 0xf1c9
 
 edges:
   exec_in:
