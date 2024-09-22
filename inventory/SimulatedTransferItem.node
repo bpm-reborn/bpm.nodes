@@ -1,0 +1,88 @@
+description: "Simulates item transfer and provides item details for filtering"
+group: Inventory
+name: Simulated Transfer Item
+extends: Base/Node
+
+theme:
+  color: '#a1c1f7'
+  height: 160
+  width: 200
+  icon: 0xf362
+
+edges:
+  exec_in:
+    description: 'Execute the simulation'
+    direction: input
+    type: exec
+  from_handler:
+    description: 'The item handler to extract from'
+    direction: input
+    type: itemhandler
+  from_slot:
+    description: 'The slot to extract from'
+    direction: input
+    type: number
+    value:
+      type: int
+      default: 0
+  to_handler:
+    description: 'The item handler to insert into'
+    direction: input
+    type: itemhandler
+  to_slot:
+    description: 'The slot to insert into'
+    direction: input
+    type: number
+    value:
+      type: int
+      default: 0
+  max_amount:
+    description: 'The maximum number of items to simulate transfer'
+    direction: input
+    type: number
+    value:
+      type: int
+      default: 64
+  simulated_item:
+    description: 'The simulated item to be transferred'
+    direction: output
+    type: item
+  simulated_amount:
+    description: 'The simulated amount to be transferred'
+    direction: output
+    type: number
+  out_from_handler:
+    description: 'Passthrough of from_handler'
+    direction: output
+    type: itemhandler
+  out_from_slot:
+    description: 'Passthrough of from_slot'
+    direction: output
+    type: number
+  out_to_handler:
+    description: 'Passthrough of to_handler'
+    direction: output
+    type: itemhandler
+  out_to_slot:
+    description: 'Passthrough of to_slot'
+    direction: output
+    type: number
+  out_max_amount:
+    description: 'Passthrough of max_amount'
+    direction: output
+    type: number
+  exec_out:
+    description: 'Simulation complete'
+    direction: output
+    type: exec
+
+source: |
+  local simulated_stack = Network:extractItem(from_handler, from_slot, max_amount, true)
+  ${OUTPUT.simulated_item = Network:getItem(simulated_stack)}
+  ${OUTPUT.simulated_amount = Network:getCount(simulated_stack)}
+  ${OUTPUT.out_from_handler = from_handler}
+  ${OUTPUT.out_from_slot = from_slot}
+  ${OUTPUT.out_to_handler = to_handler}
+  ${OUTPUT.out_to_slot = to_slot}
+  ${OUTPUT.out_max_amount = max_amount}
+  ${EXEC.exec_out}

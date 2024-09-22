@@ -1,5 +1,5 @@
 description: "Transfers items from one item handler to another"
-group: Items
+group: Inventory
 name: Transfer Item
 extends: Base/Node
 
@@ -53,6 +53,5 @@ edges:
     type: exec
 
 source: |
-  local transferredAmount = Network:transferItem(from_handler, from_slot, to_handler, to_slot, max_amount)
-  ${OUTPUT.transferred = transferredAmount}
+  ${OUTPUT.transferred = Network:transferItem(from_handler, from_slot, to_handler, to_slot, max_amount)}
   ${EXEC.exec_out}
