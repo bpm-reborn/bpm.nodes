@@ -1,0 +1,21 @@
+description: "Gets the amount of items in the given itemstack"
+group: Inventory
+name: Item Stack amount
+extends: Base/Node
+
+theme:
+  color: '#a1c1f7'
+  icon: 0xf362
+
+edges:
+  itemstack:
+    description: 'The itemstack to get the amount of'
+    direction: input
+    type: itemstack
+  amount:
+    description: 'The amount of items in the itemstack'
+    direction: output
+    type: number
+source: |
+  ${OUTPUT.amount = itemstack:getCount()}
+  

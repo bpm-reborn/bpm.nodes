@@ -43,14 +43,10 @@ edges:
     value:
       type: int
       default: 64
-  simulated_item:
+  simulated_itemstack:
     description: 'The simulated item to be transferred'
     direction: output
-    type: item
-  simulated_amount:
-    description: 'The simulated amount to be transferred'
-    direction: output
-    type: number
+    type: itemstack
   out_from_handler:
     description: 'Passthrough of from_handler'
     direction: output
@@ -78,8 +74,7 @@ edges:
 
 source: |
   local simulated_stack = Network:extractItem(from_handler, from_slot, max_amount, true)
-  ${OUTPUT.simulated_item = Network:getItem(simulated_stack)}
-  ${OUTPUT.simulated_amount = Network:getCount(simulated_stack)}
+  ${OUTPUT.simulated_itemstack = simulated_stack}
   ${OUTPUT.out_from_handler = from_handler}
   ${OUTPUT.out_from_slot = from_slot}
   ${OUTPUT.out_to_handler = to_handler}
