@@ -10,12 +10,14 @@ theme:
   icon: 0xe616
 
 edges:
+  radius:
+    description: 'The radius to search for entities'
+    direction: input
+    type: number
   entities:
     description: 'The list of entities in the world'
     direction: output
     type: table
 
 source: |
-  ${
-    OUTPUT.entities = World:getEntities()
-  }
+  ${OUTPUT.entities = world.getEntities(radius)}
