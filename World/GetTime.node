@@ -1,1 +1,20 @@
- 
+description: "Gets the current world time"
+group: World
+name: Get Time
+extends: Base/Node
+
+theme:
+  color: '#3af721'
+  height: 40
+  width: 120
+  icon: 0xf017
+
+edges:
+  time:
+    description: 'The current world time'
+    direction: output
+    type: number
+
+source: |
+  local currentTime = world.getTime()
+  ${OUTPUT.time = currentTime}
