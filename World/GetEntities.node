@@ -1,1 +1,21 @@
- 
+description: "Gets entities from the world object"
+group: World
+name: Get Entities
+extends: Base/Node
+
+theme:
+  color: '#4CAF50'
+  width: 120
+  height: 40
+  icon: 0xe616
+
+edges:
+  entities:
+    description: 'The list of entities in the world'
+    direction: output
+    type: table
+
+source: |
+  ${
+    OUTPUT.entities = World:getEntities()
+  }
