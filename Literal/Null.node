@@ -1,1 +1,10 @@
- 
+description: "Represents a null literal"
+group: Literal
+name: Null
+extends: Literal/Literal
+
+edges:
+  value:
+    type: any
+source: |
+  ${OUTPUT.value = nil}
