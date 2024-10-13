@@ -1,1 +1,16 @@
- 
+description: "Represents an integer literal"
+group: Literal
+name: Integer
+extends: Literal/Literal
+
+edges:
+  input:
+    type: boolean
+    value:
+      type: boolean
+      default: false
+  value:
+    type: boolean
+
+source: |
+  ${OUTPUT.value = input}

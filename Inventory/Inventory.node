@@ -20,5 +20,3 @@ edges:
     type: itemhandler
 source: |
   ${OUTPUT.items = World:getItemHandler(_Uid, proxy.x, proxy.y, proxy.z)}
-  
-  
