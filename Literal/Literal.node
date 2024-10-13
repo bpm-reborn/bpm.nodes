@@ -8,13 +8,3 @@ theme:
   height: 40
   width: 80
   icon: 0xf1c0
-
-edges:
-  input:
-    description: 'The literal value to output'
-    direction: input
-    type: any
-  value:
-    description: 'The literal value'
-    direction: output
-    type: any

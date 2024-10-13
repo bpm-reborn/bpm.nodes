@@ -5,12 +5,16 @@ extends: Literal/Literal
 
 edges:
   input:
+    description: "Float input"
     type: number
+    direction: input
     value:
       type: float
-      default: 0
+      default: 0.0
   value:
-    type: float
+    description: "Float value"
+    type: number
+    direction: output
 
 source: |
   ${OUTPUT.value = input}

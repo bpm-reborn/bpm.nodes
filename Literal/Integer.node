@@ -4,11 +4,16 @@ name: Integer
 extends: Literal/Literal
 
 edges:
-  value:
+  input:
+    description: "Integer input"
     type: number
+    direction: input
     value:
       type: int
       default: 0
-
+  value:
+    description: "Integer value"
+    type: number
+    direction: output
 source: |
-  ${OUTPUT.value = math.floor(value)}
+  ${OUTPUT.value = math.floor(input)}

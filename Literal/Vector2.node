@@ -18,6 +18,10 @@ edges:
     value:
       type: float
       default: 0
-
+  value:
+    description: "Vector2 value"
+    direction: output
+    type: vector2 or vector
+    
 source: |
   ${OUTPUT.value = {x = x, y = y}}

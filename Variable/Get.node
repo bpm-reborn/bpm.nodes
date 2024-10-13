@@ -10,4 +10,4 @@ edges:
     type: any
 
 source: |
-  ${OUTPUT.value = _G[name]}
+  ${OUTPUT.value = variables[name]}

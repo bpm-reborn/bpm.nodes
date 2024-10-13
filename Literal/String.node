@@ -5,11 +5,14 @@ extends: Literal/Literal
 
 edges:
   input:
+    description: "String input"
     type: string
     value:
       type: string
       default: ""
   value:
+    description: "String value"
+    direction: output
     type: string
 
 source: |

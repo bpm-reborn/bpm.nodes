@@ -3,12 +3,6 @@ group: Literal
 name: Vector
 extends: Literal/Literal
 
-edges:
-  value:
-    description: 'The vector value'
-    direction: output
-    type: vector
-
 theme:
   color: '#9C27B0'
   height: 60

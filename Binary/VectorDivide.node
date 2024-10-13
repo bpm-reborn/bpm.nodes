@@ -19,8 +19,3 @@ source: |
     w = (left.w or 0) / right
   }}
 
-theme:
-  color: '#FF9800'
-  height: 80
-  width: 120
-  icon: 0xf1cb

@@ -32,6 +32,9 @@ edges:
     value:
       type: float
       default: 0
-
+  value:
+    description: "Vector4 value"
+    direction: output
+    type: vector4 or vector
 source: |
   ${OUTPUT.value = {x = x, y = y, z = z, w = w}}

@@ -18,5 +18,5 @@ edges:
     type: exec
 
 source: |
-  _G[name] = value
+  variables[name] = value
   ${EXEC.exec_out}

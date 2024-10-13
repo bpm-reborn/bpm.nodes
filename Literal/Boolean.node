@@ -1,16 +1,17 @@
-description: "Represents an integer literal"
+description: "Represents an boolean literal"
 group: Literal
-name: Integer
+name: Boolean
 extends: Literal/Literal
 
 edges:
   input:
+    description: "Boolean input"
     type: boolean
+    direction: input
     value:
       type: boolean
       default: false
   value:
+    description: "Boolean value"
     type: boolean
-
-source: |
-  ${OUTPUT.value = input}
+    direction: output

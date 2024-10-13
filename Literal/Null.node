@@ -5,6 +5,8 @@ extends: Literal/Literal
 
 edges:
   value:
+    description: "Null value"
+    direction: output
     type: any
 source: |
   ${OUTPUT.value = nil}
