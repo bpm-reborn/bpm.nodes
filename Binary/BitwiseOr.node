@@ -5,10 +5,16 @@ extends: Binary/Binary
 
 edges:
   left:
+    description: 'The left integer'
+    direction: input
     type: integer
   right:
+    description: 'The right integer'
+    direction: input
     type: integer
   result:
+    description: 'The result of the bitwise OR operation'
+    direction: output
     type: integer
 
 source: |

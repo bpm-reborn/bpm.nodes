@@ -5,10 +5,16 @@ extends: Binary/Binary
 
 edges:
   left:
-    type: string
+    description: 'The left string'
+    direction: input
+    type: string  
   right:
+    description: 'The right string'
+    direction: input
     type: string
   result:
+    description: 'The result of the concatenation'
+    direction: output
     type: string
 
 source: |

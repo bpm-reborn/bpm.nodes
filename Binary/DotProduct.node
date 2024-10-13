@@ -5,10 +5,16 @@ extends: Binary/Binary
 
 edges:
   left:
+    description: 'The left vector'
+    direction: input
     type: vector
   right:
+    description: 'The right vector'
+    direction: input
     type: vector
   result:
+    description: 'The result of the dot product'
+    direction: output
     type: number
 
 source: |

@@ -5,6 +5,8 @@ extends: Binary/Binary
 
 edges:
   result:
+    description: 'The remainder of the division of left by right'
+    direction: output
     type: boolean
 
 source: |

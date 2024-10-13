@@ -4,14 +4,18 @@ name: Equal to
 extends: Binary/Binary
 
 edges:
-  a:
+  left:
+    description: 'The left value'
+    direction: input
     type: any
-  b:
+  right:
+    description: 'The right value'
+    direction: input
     type: any
-  is_equal:
+  result:
     description: 'True if the two values are equal'
     direction: output
     type: boolean
 
 source: |
-  ${OUTPUT.is_equal = a == b}
+  ${OUTPUT.result = left == right}

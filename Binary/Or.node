@@ -5,10 +5,16 @@ extends: Binary/Binary
 
 edges:
   left:
+    description: 'The left boolean'
+    direction: input
     type: boolean
   right:
+    description: 'The right boolean'
+    direction: input
     type: boolean
   result:
+    description: 'True if either left or right is true'
+    direction: output
     type: boolean
 
 source: |

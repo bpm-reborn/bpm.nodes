@@ -5,6 +5,8 @@ extends: Binary/Binary
 
 edges:
   result:
+    description: 'True if left is less than right'
+    direction: output
     type: boolean
 
 source: |

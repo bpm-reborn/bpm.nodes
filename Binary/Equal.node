@@ -5,6 +5,8 @@ extends: Binary/Binary
 
 edges:
   result:
+    description: 'The result of the equality check'
+    direction: output
     type: boolean
 
 source: |

@@ -5,10 +5,16 @@ extends: Binary/Binary
 
 edges:
   left:
+    description: 'The left vector'
+    direction: input
     type: vector
   right:
+    description: 'The right number'
+    direction: input
     type: number
   result:
+    description: 'The result of the division'
+    direction: output
     type: vector
 
 source: |
