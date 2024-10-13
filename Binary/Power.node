@@ -1,1 +1,7 @@
- 
+description: "Raises left to the power of right"
+group: Binary
+name: Power
+extends: Binary/Binary
+
+source: |
+  ${OUTPUT.result = left ^ right}

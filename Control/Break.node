@@ -1,1 +1,8 @@
- 
+description: "Breaks out of the current loop"
+group: Control
+name: Break
+extends: Control/Control
+
+source: |
+  break
+  ${EXEC.exec_out}

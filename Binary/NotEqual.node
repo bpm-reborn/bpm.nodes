@@ -1,1 +1,11 @@
- 
+description: "Checks if two values are not equal"
+group: Binary
+name: NotEqual
+extends: Binary/Binary
+
+edges:
+  result:
+    type: boolean
+
+source: |
+  ${OUTPUT.result = left ~= right}

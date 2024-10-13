@@ -1,1 +1,30 @@
- 
+description: "Represents a 3D vector literal"
+group: Literal
+name: Vector3
+extends: Literal/Vector
+
+edges:
+  x:
+    description: 'X component'
+    direction: input
+    type: number
+    value:
+      type: float
+      default: 0
+  y:
+    description: 'Y component'
+    direction: input
+    type: number
+    value:
+      type: float
+      default: 0
+  z:
+    description: 'Z component'
+    direction: input
+    type: number
+    value:
+      type: float
+      default: 0
+
+source: |
+  ${OUTPUT.value = {x = x, y = y, z = z}}

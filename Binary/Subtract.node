@@ -1,1 +1,7 @@
- 
+description: "Subtracts the right value from the left value"
+group: Binary
+name: Subtract
+extends: Binary/Binary
+
+source: |
+  ${OUTPUT.result = left - right}

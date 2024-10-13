@@ -1,19 +1,11 @@
-description: "Checks if the second value is less than e"
+description: "Checks if left is less than right"
 group: Binary
-name: Less Than
+name: LessThan
 extends: Binary/Binary
 
 edges:
-  a:
-    description: 'The first value to compare'
-    type: number
-  b:
-    description: 'The second value to compare'
-    type: number
-  is_less:
-    description: 'True if the first value is less than'
-    direction: output
+  result:
     type: boolean
 
 source: |
-  ${OUTPUT.is_less = a < b}
+  ${OUTPUT.result = left < right}

@@ -1,1 +1,15 @@
- 
+description: "String concatenation operation"
+group: Binary
+name: Concatenate
+extends: Binary/Binary
+
+edges:
+  left:
+    type: string
+  right:
+    type: string
+  result:
+    type: string
+
+source: |
+  ${OUTPUT.result = left .. right}

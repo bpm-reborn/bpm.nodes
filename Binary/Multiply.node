@@ -1,1 +1,8 @@
- 
+description: "Multiplies two values"
+group: Binary
+name: Multiply
+extends: Binary/Binary
+
+source: |
+  ${OUTPUT.result = left * right}
+

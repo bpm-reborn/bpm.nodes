@@ -1,1 +1,23 @@
- 
+description: "Represents a 2D vector literal"
+group: Literal
+name: Vector2
+extends: Literal/Vector
+
+edges:
+  x:
+    description: 'X component'
+    direction: input
+    type: number
+    value:
+      type: float
+      default: 0
+  y:
+    description: 'Y component'
+    direction: input
+    type: number
+    value:
+      type: float
+      default: 0
+
+source: |
+  ${OUTPUT.value = {x = x, y = y}}

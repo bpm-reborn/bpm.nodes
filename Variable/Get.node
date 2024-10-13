@@ -1,1 +1,13 @@
- 
+description: "Retrieves the value of a variable"
+group: Variable
+name: Get
+extends: Variable/Variable
+
+edges:
+  value:
+    description: 'Variable value'
+    direction: output
+    type: any
+
+source: |
+  ${OUTPUT.value = _G[name]}

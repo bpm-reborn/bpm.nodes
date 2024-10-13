@@ -1,1 +1,23 @@
- 
+description: "Retrieves the block state at a specified position"
+group: World
+name: GetBlockState
+extends: World/World
+
+edges:
+  position:
+    description: 'Block position'
+    direction: input
+    type: vector
+  block_type:
+    description: 'Type of the block'
+    direction: output
+    type: string
+  block_data:
+    description: 'Block data/state'
+    direction: output
+    type: table
+
+source: |
+  local block_type, block_data = world.getBlockState(position.x, position.y, position.z)
+  ${OUTPUT.block_type = block_type}
+  ${OUTPUT.block_data = block_data}

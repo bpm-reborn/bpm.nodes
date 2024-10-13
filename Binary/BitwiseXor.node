@@ -1,1 +1,15 @@
- 
+description: "Bitwise XOR operation"
+group: Binary
+name: BitwiseXor
+extends: Binary/Binary
+
+edges:
+  left:
+    type: integer
+  right:
+    type: integer
+  result:
+    type: integer
+
+source: |
+  ${OUTPUT.result = bit32.bxor(left, right)}

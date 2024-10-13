@@ -1,1 +1,15 @@
- 
+description: "Bitwise left shift operation"
+group: Binary
+name: LeftShift
+extends: Binary/Binary
+
+edges:
+  left:
+    type: integer
+  right:
+    type: integer
+  result:
+    type: integer
+
+source: |
+  ${OUTPUT.result = bit32.lshift(left, right)}

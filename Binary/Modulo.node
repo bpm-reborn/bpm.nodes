@@ -1,1 +1,8 @@
- 
+description: "Calculates the remainder of division of left by right"
+group: Binary
+name: Modulo
+extends: Binary/Binary
+
+source: |
+  ${OUTPUT.result = left % right}
+

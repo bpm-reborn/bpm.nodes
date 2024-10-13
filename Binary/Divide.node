@@ -1,1 +1,8 @@
- 
+description: "Divides the left value by the right value"
+group: Binary
+name: Divide
+extends: Binary/Binary
+
+source: |
+  ${OUTPUT.result = left / right}
+

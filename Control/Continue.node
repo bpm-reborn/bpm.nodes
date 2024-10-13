@@ -1,1 +1,9 @@
- 
+description: "Skips to the next iteration of the current loop"
+group: Control
+name: Continue
+extends: Control/Control
+
+source: |
+  ${EXEC.exec_out}
+  return
+

@@ -1,19 +1,11 @@
-description: "Compares if the first value is greater than the second"
+description: "Checks if left is greater than right"
 group: Binary
-name: Greater Than
+name: GreaterThan
 extends: Binary/Binary
 
 edges:
-  a:
-    description: 'The first value to compare'
-    type: number
-  b:
-    description: 'The second value to compare'
-    type: number
-  is_greater:
-    description: 'True if the first value is greater than the second'
-    direction: output
+  result:
     type: boolean
 
 source: |
-  ${OUTPUT.is_greater = a > b}
+  ${OUTPUT.result = left > right}

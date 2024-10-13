@@ -1,1 +1,20 @@
- 
+description: "Multiplies a vector by a scalar"
+group: Binary
+name: VectorMultiply
+extends: Binary/Binary
+
+edges:
+  left:
+    type: vector
+  right:
+    type: number
+  result:
+    type: vector
+
+source: |
+  ${OUTPUT.result = {
+    x = (left.x or 0) * right,
+    y = (left.y or 0) * right,
+    z = (left.z or 0) * right,
+    w = (left.w or 0) * right
+  }}

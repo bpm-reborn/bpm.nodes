@@ -1,1 +1,37 @@
- 
+description: "Represents a 4D vector literal"
+group: Literal
+name: Vector4
+extends: Literal/Vector
+
+edges:
+  x:
+    description: 'X component'
+    direction: input
+    type: number
+    value:
+      type: float
+      default: 0
+  y:
+    description: 'Y component'
+    direction: input
+    type: number
+    value:
+      type: float
+      default: 0
+  z:
+    description: 'Z component'
+    direction: input
+    type: number
+    value:
+      type: float
+      default: 0
+  w:
+    description: 'W component'
+    direction: input
+    type: number
+    value:
+      type: float
+      default: 0
+
+source: |
+  ${OUTPUT.value = {x = x, y = y, z = z, w = w}}

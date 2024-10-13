@@ -1,17 +1,15 @@
-description: "True if either values are true"
+description: "Logical OR operation"
 group: Binary
 name: Or
 extends: Binary/Binary
 
 edges:
-  a:
+  left:
     type: boolean
-  b:
+  right:
     type: boolean
-  either_are_true:
-    description: 'True if either values are true'
-    direction: output
+  result:
     type: boolean
 
 source: |
-  ${OUTPUT.either_are_true = a or b}
+  ${OUTPUT.result = left or right}

@@ -1,1 +1,15 @@
- 
+description: "Bitwise OR operation"
+group: Binary
+name: BitwiseOr
+extends: Binary/Binary
+
+edges:
+  left:
+    type: integer
+  right:
+    type: integer
+  result:
+    type: integer
+
+source: |
+  ${OUTPUT.result = bit32.bor(left, right)}

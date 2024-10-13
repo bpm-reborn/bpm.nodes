@@ -1,1 +1,12 @@
- 
+description: "Checks if two values are equal"
+group: Binary
+name: Equal
+extends: Binary/Binary
+
+edges:
+  result:
+    type: boolean
+
+source: |
+  ${OUTPUT.result = left == right}
+

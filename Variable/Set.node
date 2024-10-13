@@ -1,1 +1,22 @@
- 
+description: "Sets the value of a variable"
+group: Variable
+name: Set
+extends: Variable/Variable
+
+edges:
+  value:
+    description: 'Value to set'
+    direction: input
+    type: any
+  exec_in:
+    description: 'Execution input'
+    direction: input
+    type: exec
+  exec_out:
+    description: 'Execution output'
+    direction: output
+    type: exec
+
+source: |
+  _G[name] = value
+  ${EXEC.exec_out}

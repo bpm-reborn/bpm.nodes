@@ -1,1 +1,11 @@
- 
+description: "Represents a table literal"
+group: Literal
+name: Table
+extends: Literal/Literal
+
+edges:
+  value:
+    type: table
+
+source: |
+  ${OUTPUT.value = value}

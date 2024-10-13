@@ -1,1 +1,15 @@
- 
+description: "Bitwise AND operation"
+group: Binary
+name: BitwiseAnd
+extends: Binary/Binary
+
+edges:
+  left:
+    type: integer
+  right:
+    type: integer
+  result:
+    type: integer
+
+source: |
+  ${OUTPUT.result = bit32.band(left, right)}

@@ -1,1 +1,15 @@
- 
+description: "Bitwise right shift operation"
+group: Binary
+name: RightShift
+extends: Binary/Binary
+
+edges:
+  left:
+    type: integer
+  right:
+    type: integer
+  result:
+    type: integer
+
+source: |
+  ${OUTPUT.result = bit32.rshift(left, right)}

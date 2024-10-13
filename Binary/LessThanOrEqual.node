@@ -1,19 +1,11 @@
-description: "Checks if the second value is less than or equal to the second value"
+description: "Checks if left is less than or equal to right"
 group: Binary
-name: Less Than or Equal
+name: LessThanOrEqual
 extends: Binary/Binary
 
 edges:
-  a:
-    description: 'The first value to compare'
-    type: number
-  b:
-    description: 'The second value to compare'
-    type: number
-  is_less_or_equal:
-    description: 'True if the first value is less than or equal to the second'
-    direction: output
+  result:
     type: boolean
 
 source: |
-  ${OUTPUT.is_less_or_equal = a < b or a == b}
+  ${OUTPUT.result = left <= right}

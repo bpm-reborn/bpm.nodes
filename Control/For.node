@@ -1,7 +1,7 @@
-description: "Does the execution flow for the given range"
+description: "Executes a block of code for a specified range of values"
 group: Control
 name: For
-extends: Control/Control
+extends: Control/IterationControl
 
 edges:
   initial:
@@ -19,23 +19,20 @@ edges:
       type: int
       default: 1
   increment:
-    description: 'The step'
+    description: 'The step value for each iteration'
     direction: input
     type: number
     value:
       type: int
       default: 1
-  iterator:
-    description: 'The iterated index'
+  index:
+    description: 'The current index in the iteration'
     direction: output
     type: number
-  on_for:
-    description: 'The output execution flow if the loop ends'
-    direction: output
-    type: exec
 source: |
   for i = initial, target, increment do
-      ${OUTPUT.iterator = i}
-      ${EXEC.on_for}
+      ${OUTPUT.current_value = i}
+      ${OUTPUT.index = i}
+      ${EXEC.on_iteration}
   end
   ${EXEC.exec_out}

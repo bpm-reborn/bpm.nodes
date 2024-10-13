@@ -1,1 +1,43 @@
- 
+description: "Multi-way branching control structure"
+group: Control
+name: Switch
+extends: Control/Control
+
+edges:
+  value:
+    description: 'The value to switch on'
+    direction: input
+    type: any
+  case_1:
+    description: 'First case value'
+    direction: input
+    type: any
+  case_1_exec:
+    description: 'Executed if value matches case_1'
+    direction: output
+    type: exec
+  case_2:
+    description: 'Second case value'
+    direction: input
+    type: any
+  case_2_exec:
+    description: 'Executed if value matches case_2'
+    direction: output
+    type: exec
+  default:
+    description: 'Executed if no cases match'
+    direction: output
+    type: exec
+source: |
+  local matched = false
+  if value == case_1 then
+      ${EXEC.case_1_exec}
+      matched = true
+  elseif value == case_2 then
+      ${EXEC.case_2_exec}
+      matched = true
+  end
+  if not matched then
+      ${EXEC.default}
+  end
+  ${EXEC.exec_out}

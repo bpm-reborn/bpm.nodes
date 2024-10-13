@@ -1,1 +1,15 @@
- 
+description: "Executes a block of code while a condition is true"
+group: Control
+name: While
+extends: Control/IterationControl
+
+edges:
+  condition:
+    description: 'The condition to evaluate before each iteration'
+    direction: input
+    type: boolean
+source: |
+  while condition do
+      ${EXEC.on_iteration}
+  end
+  ${EXEC.exec_out}

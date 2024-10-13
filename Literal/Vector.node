@@ -1,1 +1,16 @@
- 
+description: "Base node for vector literals"
+group: Literal
+name: Vector
+extends: Literal/Literal
+
+edges:
+  value:
+    description: 'The vector value'
+    direction: output
+    type: vector
+
+theme:
+  color: '#9C27B0'
+  height: 60
+  width: 100
+  icon: 0xf1cb

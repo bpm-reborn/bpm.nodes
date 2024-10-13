@@ -1,1 +1,14 @@
- 
+description: "Represents an integer literal"
+group: Literal
+name: Integer
+extends: Literal/Literal
+
+edges:
+  value:
+    type: number
+    value:
+      type: int
+      default: 0
+
+source: |
+  ${OUTPUT.value = math.floor(value)}

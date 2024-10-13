@@ -1,1 +1,14 @@
- 
+description: "Base node for iteration control structures"
+group: Control
+name: IterationControl
+extends: Control/Control
+
+edges:
+  on_iteration:
+    description: 'Called for each iteration'
+    direction: output
+    type: exec
+  current_value:
+    description: 'The current value in the iteration'
+    direction: output
+    type: any

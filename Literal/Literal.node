@@ -1,7 +1,7 @@
 description: "Base node for literal values"
 group: Literal
 name: Literal
-extends: Base/Node
+extends: Node
 
 edges:
   value:
