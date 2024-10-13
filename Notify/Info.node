@@ -25,9 +25,6 @@ edges:
     type: exec
 
 source: |
-  
-  local length = string.len(message)
-  local time = length * 0.5
-  Notify:message(message, time, "#22D8C9F5", "Info", "INFO")
+  Notify:message(message, 3, "#22D8C9F5", "Info", "INFO")
   ${EXEC.exec_out}
   
