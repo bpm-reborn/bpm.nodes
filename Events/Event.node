@@ -1,12 +1,12 @@
 description: 'The base node for all nodes that can be used in a workflow.'
-group: Base
+group: Events
 name: Event
 
 theme:
-  color: '#db8d27'
+  color: '#b3281e'
   width: 120
   height: 40
-  icon: 0xf6e3
+  icon: 0xf6ff
 
 edges:
   exec_out:

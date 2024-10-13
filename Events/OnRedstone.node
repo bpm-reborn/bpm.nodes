@@ -2,12 +2,8 @@
 description: "Calls the output execution flow if the location has redstone power."
 group: Events
 name: Redstone
-extends: Base/Node
-theme:
-  color: '#b3281e'
-  width: 120
-  height: 40
-  icon: 0xf6ff
+extends: Events/Event
+
 edges:
   pos:
     description: 'The location to check for redstone power.'
@@ -25,12 +21,9 @@ edges:
     description: 'The redstone power level at the location.'
     direction: output
     type: number
-  exec_out:
-    description: 'The output execution flow'
-    direction: output
-    type: exec
 source: |
   local power = World:signalAt(pos.x, pos.y, pos.z)
+  -- Should probably use a hash of the position as the key
   if variables["power"] == nil then
       variables["power"] = 0
       return
