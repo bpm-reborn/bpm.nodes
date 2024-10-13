@@ -1,17 +1,18 @@
-description: "Calculates the tangent of an angle"
+description: "Calculates the square root of a number"
 group: Math
-name: Tan
+name: Sqrt
 extends: Math/Math
 
 edges:
-  angle:
-    description: 'Input angle in radians'
+  number:
+    description: 'The number to calculate the square root of'
     direction: input
     type: number
   result:
-    description: 'Sine of the angle'
+    description: 'The square root of the number'
     direction: output
     type: number
 
 source: |
-  ${OUTPUT.result = math.tan(angle)}
+  ${OUTPUT.result = math.sqrt(number)}
+

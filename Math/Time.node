@@ -1,0 +1,13 @@
+description: "Gets the current tick time  "
+group: Math
+name: Time
+extends: Math/Math
+
+edges:
+  result:
+    description: 'The current tick time'
+    direction: output
+    type: number
+
+source: |
+  ${OUTPUT.result = variables['tick']}
