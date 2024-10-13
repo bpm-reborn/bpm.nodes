@@ -1,1 +1,16 @@
- 
+description: "Represents a string literal"
+group: Literal
+name: String
+extends: Literal/Literal
+
+edges:
+  input:
+    type: string
+    value:
+      type: string
+      default: ""
+  value:
+    type: string
+
+source: |
+  ${OUTPUT.value = input}

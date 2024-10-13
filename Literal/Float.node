@@ -1,14 +1,16 @@
-description: "Represents a numeric literal"
+description: "Represents a float literal"
 group: Literal
-name: Number
+name: Float
 extends: Literal/Literal
 
 edges:
-  value:
+  input:
     type: number
     value:
       type: float
       default: 0
+  value:
+    type: float
 
 source: |
-  ${OUTPUT.value = value}
+  ${OUTPUT.value = input}

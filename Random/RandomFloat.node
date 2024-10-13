@@ -9,6 +9,7 @@ theme:
   width: 120
   height: 60
   icon: 0xe55f
+  
 edges:
   min:
     description: 'The minimum value (inclusive)'

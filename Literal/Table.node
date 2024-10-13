@@ -4,8 +4,10 @@ name: Table
 extends: Literal/Literal
 
 edges:
+  input:
+    type: table
   value:
     type: table
 
 source: |
-  ${OUTPUT.value = value}
+  ${OUTPUT.value = input}
