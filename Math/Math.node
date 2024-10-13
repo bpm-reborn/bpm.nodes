@@ -1,0 +1,8 @@
+description: "Base node for mathematical operations"
+group: Math
+name: Math
+extends: Base/Node
+
+theme:
+  color: '#E91E63'
+  icon: 0xf1ec

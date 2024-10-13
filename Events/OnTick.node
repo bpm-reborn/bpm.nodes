@@ -1,8 +1,14 @@
-# OnRun.node
-description: "The main event node for a workflow run."
+description: "Called once per tick (20 times per second)"
 group: Events
 name: Tick
 extends: Events/Event
 
+edges:
+  tick:
+    description: "The current tick number"
+    type: number
+    direction: output
 source: |
+  variables['tick'] = (variables['tick'] or 0) + 1
+  ${OUTPUT.tick = variables['tick']}
   ${EXEC.exec_out}

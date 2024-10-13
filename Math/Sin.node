@@ -1,0 +1,17 @@
+description: "Calculates the sine of an angle"
+group: Math
+name: Sin
+extends: Math/Math
+
+edges:
+  angle:
+    description: 'Input angle in radians'
+    direction: input
+    type: number
+  result:
+    description: 'Sine of the angle'
+    direction: output
+    type: number
+
+source: |
+  ${OUTPUT.result = math.sin(angle)}

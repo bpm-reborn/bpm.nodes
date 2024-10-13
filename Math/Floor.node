@@ -1,0 +1,18 @@
+description: "Calculates the floor of a number"
+group: Math
+name: Floor
+extends: Math/Math
+
+edges:
+  number:
+    description: 'The number to calculate the floor of'
+    direction: input
+    type: number
+  result:
+    description: 'The floor of the number'
+    direction: output
+    type: number
+
+source: |
+  ${OUTPUT.result = math.floor(number)}
+

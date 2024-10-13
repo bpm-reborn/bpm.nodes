@@ -1,0 +1,17 @@
+description: "Rounds a number to the nearest integer"
+group: Math
+name: Round
+extends: Math/Math
+
+edges:
+  number:
+    description: 'The number to round'
+    direction: input
+    type: number
+  result:
+    description: 'The rounded number'
+    direction: output
+    type: number
+
+source: |
+  ${OUTPUT.result = math.round(number)}

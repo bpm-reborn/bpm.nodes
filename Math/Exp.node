@@ -1,0 +1,17 @@
+description: "Calculates the exponential of a number"
+group: Math
+name: Exp
+extends: Math/Math
+
+edges:
+  number:
+    description: 'The number to calculate the exponential of'
+    direction: input
+    type: number
+  result:
+    description: 'The exponential of the number'
+    direction: output
+    type: number
+
+source: |
+  ${OUTPUT.result = math.exp(number)} 

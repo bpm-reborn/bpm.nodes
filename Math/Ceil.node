@@ -1,0 +1,17 @@
+description: "Calculates the ceiling of a number"
+group: Math
+name: Ceil
+extends: Math/Math
+
+edges:
+  number:
+    description: 'The number to calculate the ceiling of'
+    direction: input
+    type: number
+  result:
+    description: 'The ceiling of the number'
+    direction: output
+    type: number
+
+source: |
+  ${OUTPUT.result = math.ceil(number)}

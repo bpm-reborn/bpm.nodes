@@ -1,0 +1,18 @@
+description: "Calculates the logarithm of a number"
+group: Math
+name: Log
+extends: Math/Math
+
+edges:
+  number:
+    description: 'The number to calculate the logarithm of'
+    direction: input
+    type: number
+  result:
+    description: 'The logarithm of the number'
+    direction: output
+    type: number
+
+source: |
+  ${OUTPUT.result = math.log(number)}
+

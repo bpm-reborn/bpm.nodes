@@ -1,0 +1,18 @@
+description: "Calculates the cosine of an angle"
+group: Math
+name: Cos
+extends: Math/Math
+
+edges:
+  angle:
+    description: 'Input angle in radians'
+    direction: input
+    type: number
+  result:
+    description: 'Cosine of the angle'
+    direction: output
+    type: number
+
+source: |
+  ${OUTPUT.result = math.cos(angle)}
+
