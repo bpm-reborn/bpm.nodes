@@ -1,0 +1,10 @@
+description: "Base node for server-side world interactions"
+group: World
+name: World
+extends: Base/Node
+
+theme:
+  color: '#8BC34A'
+  height: 60
+  width: 120
+  icon: 0xf0ac

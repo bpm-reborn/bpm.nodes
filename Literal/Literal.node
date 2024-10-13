@@ -1,0 +1,16 @@
+description: "Base node for literal values"
+group: Literal
+name: Literal
+extends: Base/Node
+
+edges:
+  value:
+    description: 'The literal value'
+    direction: output
+    type: any
+
+theme:
+  color: '#FFC107'
+  height: 40
+  width: 80
+  icon: 0xf1c0

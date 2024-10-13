@@ -1,0 +1,38 @@
+description: "Decomposes a vector into its components"
+group: Decomposition
+name: VectorDecompose
+extends: Base/Node
+
+edges:
+  vector:
+    description: 'Input vector'
+    direction: input
+    type: vector
+  x:
+    description: 'X component'
+    direction: output
+    type: number
+  y:
+    description: 'Y component'
+    direction: output
+    type: number
+  z:
+    description: 'Z component'
+    direction: output
+    type: number
+  w:
+    description: 'W component'
+    direction: output
+    type: number
+
+source: |
+  ${OUTPUT.x = vector.x or 0}
+  ${OUTPUT.y = vector.y or 0}
+  ${OUTPUT.z = vector.z or 0}
+  ${OUTPUT.w = vector.w or 0}
+
+theme:
+  color: '#FF9800'
+  height: 80
+  width: 120
+  icon: 0xf1cb

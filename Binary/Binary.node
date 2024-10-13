@@ -1,18 +1,24 @@
-description: "A binary node that performs some action upon two values"
+description: "Base node for binary operations"
 group: Binary
 name: Binary
-theme:
-  color: '#ac3e3d'
-  height: 80
-  width: 100
-  icon: 0x21bb
+extends: Base/Node
 
 edges:
-  a:
-    description: 'The first first value'
+  left:
+    description: 'Left operand'
     direction: input
-    # type: To be implemented by implementing node
-  b:
-    description: 'The second value'
+    type: any
+  right:
+    description: 'Right operand'
     direction: input
-    # type: To be implemented by implementing node
+    type: any
+  result:
+    description: 'Result of the binary operation'
+    direction: output
+    type: any
+
+theme:
+  color: '#4CAF50'
+  height: 60
+  width: 100
+  icon: 0xf1ec
