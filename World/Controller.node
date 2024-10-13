@@ -12,7 +12,7 @@ edges:
   location:
     description: 'The block position'
     direction: output
-    type: vec3i
+    type: vector or vector3
 source: |
   local vector = {
     x = 0,
