@@ -1,1 +1,34 @@
- 
+description: "Adds an element to the end of an array"
+group: Array
+name: Push
+extends: Array/Array
+
+edges:
+  array:
+    description: 'The array to push to'
+    direction: input
+    type: list
+  value:
+    description: 'The value to push'
+    direction: input
+    type: any
+  exec_in:
+    description: 'Execute the push'
+    direction: input
+    type: exec
+  result:
+    description: 'The modified array'
+    direction: output
+    type: list
+  exec_out:
+    description: 'Execution complete'
+    direction: output
+    type: exec
+
+source: |
+  if type(array) ~= "table" then
+    array = {}
+  end
+  table.insert(array, value)
+  ${OUTPUT.result = array}
+  ${EXEC.exec_out} 

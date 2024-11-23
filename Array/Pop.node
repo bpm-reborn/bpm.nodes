@@ -1,1 +1,35 @@
- 
+description: "Removes and returns the last element of an array"
+group: Array
+name: Pop
+extends: Array/Array
+
+edges:
+  array:
+    description: 'The array to pop from'
+    direction: input
+    type: list
+  exec_in:
+    description: 'Execute the pop'
+    direction: input
+    type: exec
+  value:
+    description: 'The popped value'
+    direction: output
+    type: any
+  result:
+    description: 'The modified array'
+    direction: output
+    type: list
+  exec_out:
+    description: 'Execution complete'
+    direction: output
+    type: exec
+
+source: |
+  if type(array) ~= "table" then
+    array = {}
+  end
+  local value = table.remove(array)
+  ${OUTPUT.value = value}
+  ${OUTPUT.result = array}
+  ${EXEC.exec_out} 
